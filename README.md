@@ -21,7 +21,7 @@ terraform apply -var="env=dev" -var="alert_email=you@example.com"
 ```
 
 ## CI/CD
-`.github/workflows/terraform.yml` runs `fmt -check`, `validate`, `tflint` and `plan` on every pull request, and `apply` on merge to `main` (using GitHub OIDC → AWS IAM role, no long-lived keys).
+`.github/workflows/terraform.yml` runs `fmt -check`, `validate`, `tflint` and `plan` on every pull request, and `apply` on manual dispatch (using GitHub OIDC → AWS IAM role, no long-lived keys).
 
 ## Tech
 Terraform · AWS (S3, Glue, Athena, Redshift Serverless, KMS, IAM, CloudWatch, SNS) · GitHub Actions
